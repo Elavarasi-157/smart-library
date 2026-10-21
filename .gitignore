@@ -1,0 +1,13 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+.env
+cloudflared.exe
+cloudflared_runner.exe
+*.log
+dist/
+client/dist/
+.DS_Store
+Thumbs.db
+server/smart_library.db
+server/uploads/

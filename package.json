@@ -1,0 +1,33 @@
+{
+  "name": "smart-library-system",
+  "version": "1.0.0",
+  "description": "Production-Ready Smart Library Management System",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "seed": "node server/seeds/seedData.js",
+    "test": "node server/tests/api.test.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm --prefix client install && npm --prefix client run build"
+  },
+  "keywords": ["library", "smart-library", "academic", "gemini-ai", "cashfree"],
+  "author": "Smart Library Team",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4",
+    "sql.js": "^1.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
