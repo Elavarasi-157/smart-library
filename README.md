@@ -94,3 +94,11 @@ npm run dev
 ```
 
 Open `http://localhost:5173` in your browser.
+
+## ☁️ Deploying to Render
+
+1. In Render, create a new **Blueprint** and connect this GitHub repository.
+2. Render detects `render.yaml` and creates the free `smart-library` web service.
+3. Wait for the deploy to finish, then open the service URL. Render checks `/api/health`.
+
+The free service uses temporary storage. Its SQLite database and uploaded files can be lost when Render restarts or redeploys the service. The service starts with an empty database; it does not automatically seed the sample accounts. For persistent library data, use a paid persistent disk and configure `SQLITE_DB_PATH` to a path on that disk. Configure optional integrations such as Gemini and Cashfree in the Render environment settings.
